@@ -1,1 +1,40 @@
-TB Detection Program Files
+train and val have images after inversion correction
+
+How to Run
+
+Step 1
+
+make sure best_lung_model.h5 is in the same folder
+
+use segment_v1.py to generate new dataset with segmentations performed
+after execution new folder train-segmented and val-segmented will be created
+
+(Used H100 with 10 GB memory)
+
+rename train-segmented to train and val-segmented to val
+
+Step 2
+
+run model_v1.py
+
+bash command : 
+
+python model_v1.py --models swin_t
+python model_v1.py --models convnext_t
+
+Step 3 :
+
+Take a random image from train or val and pass it to predict.py
+
+bash command: 
+
+python predict.py --image <enter_image_name>.jpg --model checkpoints/swin_t_
+best.pt --device cuda
+
+python predict.py --image <enter_image_name>.jpg --model checkpoints/convnext_t_
+best.pt --device cuda
+
+Note: 
+
+segment_v0.py make the background black
+segment_v1.py makes applies soft masking ( dims non lung regions)
