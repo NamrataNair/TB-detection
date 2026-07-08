@@ -220,10 +220,8 @@ def format_prediction(result: Dict) -> str:
     
     # Visual indicator
     if pred_class == "TB":
-        icon = "⚠️"
         recommendation = "Further clinical evaluation recommended."
     else:
-        icon = "✅"
         recommendation = "No signs of TB detected."
     
     output = f"""
