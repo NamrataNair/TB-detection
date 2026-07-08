@@ -36,5 +36,5 @@ best.pt --device cuda
 
 Note: 
 
-segment_v0.py make the background black
-segment_v1.py makes applies soft masking ( dims non lung regions)
+segment_v0.py make the background black via lung detection and bounding box
+segment_v1.py makes applies soft masking ( dims non lung regions) via lung detection and bounding box
