@@ -4,4 +4,4 @@ kaggle dataset link : https://www.kaggle.com/datasets/nikhilpandey360/chest-xray
 
 keep the masks folder and CXR_png folder in the same location as the python script before running
 
-The weights are already trained and saved in previous folder
+The weights are already trained and saved in current folder
